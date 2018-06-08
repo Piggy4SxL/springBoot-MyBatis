@@ -2,24 +2,24 @@
 <!DOCTYPE mapper PUBLIC "-//mybatie.org//DTD Mapper 3.0//EN"
         "http://mybatie.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.sxl.base.dao.ExampleDao">
-    <resultMap id="ExampleMap" type="com.sxl.base.entity.Example">
+<mapper namespace="com.sxl.sbm.dao.ExampleDao">
+    <resultMap id="ExampleMap" type="com.sxl.sbm.entity.Example">
         <id column="example_id" property="exampleId"/>
         <result column="example_name" property="exampleName"/>
-        <association property="servletName" column="servlet_id" javaType="com.sxl.base.entity.ServletName">
+        <association property="servletName" column="servlet_id" javaType="com.sxl.sbm.entity.ServletName">
             <id column="servlet_id" property="servletId"/>
             <result column="servlet_name" property="servletName"/>
         </association>
     </resultMap>
 
-    <insert id="insertExample" parameterType="com.sxl.base.entity.Example" useGeneratedKeys="true" keyColumn="example_id"
+    <insert id="insertExample" parameterType="com.sxl.sbm.entity.Example" useGeneratedKeys="true" keyColumn="example_id"
             keyProperty="exampleId">
         INSERT INTO
         tb_example(example_id, example_name, servlet_name)
         VALUES (#{exampleId}, #{exampleName}, #{servletName.servletName})
     </insert>
 
-    <update id="updateExample" parameterType="com.sxl.base.entity.Example">
+    <update id="updateExample" parameterType="com.sxl.sbm.entity.Example">
         UPDATE tb_example
         <set>
             <if test="servletName != null">servlet_name = #{servletName.servletName},</if>
