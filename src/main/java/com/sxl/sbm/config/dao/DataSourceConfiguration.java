@@ -1,7 +1,7 @@
 package com.sxl.sbm.config.dao;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
-import com.sxl.sbm.util.DESUtil;
+import com.sxl.sbm.util.DesUtil;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -30,8 +30,8 @@ public class DataSourceConfiguration {
         ComboPooledDataSource dataSource = new ComboPooledDataSource();
         dataSource.setDriverClass(jdbcDriver);
         dataSource.setJdbcUrl(jdbcUrl);
-        dataSource.setUser(DESUtil.getDecryptString(jdbcUsername));
-        dataSource.setPassword(DESUtil.getDecryptString(jdbcPassword));
+        dataSource.setUser(DesUtil.getDecryptString(jdbcUsername));
+        dataSource.setPassword(DesUtil.getDecryptString(jdbcPassword));
         dataSource.setMaxPoolSize(30);
         dataSource.setMinPoolSize(10);
         dataSource.setAutoCommitOnClose(false);

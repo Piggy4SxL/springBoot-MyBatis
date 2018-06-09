@@ -1,5 +1,8 @@
 package com.sxl.sbm.entity;
 
+/**
+ * @author SxL
+ */
 public class ServletName {
     private int servletId;
     private String servletName;

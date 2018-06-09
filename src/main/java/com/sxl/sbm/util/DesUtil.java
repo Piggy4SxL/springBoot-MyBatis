@@ -1,13 +1,12 @@
 package com.sxl.sbm.util;
 
-import java.security.Key;
-import java.security.SecureRandom;
+import sun.misc.BASE64Decoder;
+import sun.misc.BASE64Encoder;
 
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
-
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
+import java.security.Key;
+import java.security.SecureRandom;
 
 /**
  * DES是一种对称加密算法，所谓对称加密算法即：加密和解密使用相同密钥的算法。
@@ -15,10 +14,12 @@ import sun.misc.BASE64Encoder;
  * @author SxL
  *
  */
-public class DESUtil {
+public class DesUtil {
 
 	private static Key key;
-	// 设置密钥key
+	/**
+	 * 设置密钥key
+	 */
 	private static String KEY_STR = "sxl";
 	private static String CHARSETNAME = "UTF-8";
 	private static String ALGORITHM = "DES";

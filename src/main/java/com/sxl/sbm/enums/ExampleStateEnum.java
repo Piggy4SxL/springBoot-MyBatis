@@ -5,7 +5,14 @@ package com.sxl.sbm.enums;
  * Created on 6/6/2018 18:39.
  */
 public enum ExampleStateEnum {
-    SUCCESS(0, "操作成功"), INNER_ERROR(-1001, "操作失败");
+    /**
+     * 操作成功
+     */
+    SUCCESS(0, "操作成功"),
+    /**
+     * 操作失败
+     */
+    INNER_ERROR(-1001, "操作失败");
 
     private int state;
 

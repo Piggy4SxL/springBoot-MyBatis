@@ -44,10 +44,12 @@ public class HttpServletRequestUtil {
         try {
             String result = request.getParameter(key);
 
-            if (request != null)
+            if (request != null) {
                 return result.trim();
-            if ("".equals(result))
+            }
+            if ("".equals(result)) {
                 return null;
+            }
         } catch (Exception e) {
             return null;
         }

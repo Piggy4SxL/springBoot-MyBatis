@@ -16,15 +16,14 @@ import java.util.Map;
  * 业务处理Controller
  */
 @Controller
-//URL路径
 @RequestMapping("/example")
 public class ExampleController {
     private Logger logger = LoggerFactory.getLogger(ExampleController.class);
 
     @GetMapping("/**")
     @ResponseBody
-    private Map<String, Object> GetMapping(HttpServletRequest request){
-        Map<String, Object> modelMap = new HashMap<>();
+    private Map<String, Object> getMapping(HttpServletRequest request){
+        Map<String, Object> modelMap = new HashMap<>(16);
 
         /*
                  逻辑处理
@@ -35,8 +34,8 @@ public class ExampleController {
 
     @PostMapping("/**")
     @ResponseBody
-    private Map<String, Object> PostMapping(HttpServletRequest request){
-        Map<String, Object> modelMap = new HashMap<>();
+    private Map<String, Object> postMapping(HttpServletRequest request){
+        Map<String, Object> modelMap = new HashMap<>(16);
 
         /*
                  逻辑处理
@@ -47,8 +46,8 @@ public class ExampleController {
 
     @PutMapping("/**")
     @ResponseBody
-    private Map<String, Object> PutMapping(HttpServletRequest request){
-        Map<String, Object> modelMap = new HashMap<>();
+    private Map<String, Object> putMapping(HttpServletRequest request){
+        Map<String, Object> modelMap = new HashMap<>(16);
 
         /*
                  逻辑处理
@@ -59,8 +58,8 @@ public class ExampleController {
 
     @DeleteMapping("/**")
     @ResponseBody
-    private Map<String, Object> DeleteMapping(HttpServletRequest request){
-        Map<String, Object> modelMap = new HashMap<>();
+    private Map<String, Object> deleteMapping(HttpServletRequest request){
+        Map<String, Object> modelMap = new HashMap<>(16);
 
         /*
                  逻辑处理

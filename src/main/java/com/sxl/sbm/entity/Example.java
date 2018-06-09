@@ -1,6 +1,9 @@
 package com.sxl.sbm.entity;
 
 
+/**
+ * @author SxL
+ */
 public class Example {
 
     private int id;

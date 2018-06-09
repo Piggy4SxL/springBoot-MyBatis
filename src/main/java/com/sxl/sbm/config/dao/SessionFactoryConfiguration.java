@@ -40,11 +40,11 @@ public class SessionFactoryConfiguration {
 
     @Value("${mybatis_config_file}")
     public void setMyBatisConfigFile(String myBatisConfigFile) {
-        this.myBatisConfigFile = myBatisConfigFile;
+        SessionFactoryConfiguration.myBatisConfigFile = myBatisConfigFile;
     }
 
     @Value("${mapper_path}")
     public void setMapperPath(String mapperPath) {
-        this.mapperPath = mapperPath;
+        SessionFactoryConfiguration.mapperPath = mapperPath;
     }
 }

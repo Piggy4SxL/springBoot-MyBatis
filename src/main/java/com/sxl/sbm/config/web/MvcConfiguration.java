@@ -32,7 +32,7 @@ public class MvcConfiguration implements ApplicationContextAware, WebMvcConfigur
      */
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-//        registry.addResourceHandler("/resource/**").addResourceLocations("classpath:/resource/");
+///        registry.addResourceHandler("/resource/**").addResourceLocations("classpath:/resource/");
         registry.addResourceHandler("/upload/**").addResourceLocations("file:/root/upload/");
     }
 

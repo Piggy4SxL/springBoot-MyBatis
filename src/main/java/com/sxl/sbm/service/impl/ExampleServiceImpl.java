@@ -14,13 +14,13 @@ import java.util.List;
  */
 public class ExampleServiceImpl implements ExampleService {
     @Override
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public ExampleExection saveExample(Example example) throws ExampleOperatorException {
         return null;
     }
 
     @Override
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public ExampleExection updateExample(Example example) throws ExampleOperatorException {
         return null;
     }
